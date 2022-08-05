@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+body {
+  font-family: 'Overpass', sans-serif;
+  font-size: 15px;
+  background-color: #060708;
+  color: #7c8798;
+}
+
+#content_box {
+  position: relative;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#rating_container, #thanks_container {
+  position: absolute;
+  content: '';
+  width: 300px;
+  height: 440px;
+  overflow: hidden;
+  border-radius: 25px;
+  padding: 30px;
+}
+
+#rating_container::after, #thanks_container::after {
+  position: absolute;
+  content: '';
+  width: 360px;
+  height: 700px;
+  top: -350px;
+  left: 0;
+  background: #252d37;
+  background: radial-gradient(circle, #252e3a 0%, #121417 90%);
+  background-repeat: no-repeat;
+  z-index: -1;
+  border-radius: 25px;
+}
+
+#rating_container {
+  z-index: 5;
+}
+
+#thanks_container {
+  z-index: 3;
+}
+
+.borderimg {
+  background-color: rgba(255, 255, 255, 0.1);
+  width: 15px;
+  padding: 12px;
+  border-radius: 50%;
+}
+
+h1 {
+  font-size: 24px;
+  color: white;
+}
+
+#rating_box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 90px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.number {
+  width: 45px;
+  height: 45px;
+  background-color: rgba(124, 135, 152, 0.2);
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.number:hover {
+  background-color: #fb7413;
+  color: white;
+  cursor: pointer;
+}
+
+.number:active {
+  background-color: #959eac;
+}
+
+.n_active {
+  background-color: #959eac;
+  color: white;
+}
+
+.rating_box_fade {
+  -webkit-animation: fade_box_out .3s ease-in-out forwards;
+          animation: fade_box_out .3s ease-in-out forwards;
+}
+
+@-webkit-keyframes fade_box_out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade_box_out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.thanks_container_fade {
+  -webkit-animation: fade_box_in .3s ease-in-out forwards;
+          animation: fade_box_in .3s ease-in-out forwards;
+  -webkit-animation-delay: .3s;
+          animation-delay: .3s;
+}
+
+@-webkit-keyframes fade_box_in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade_box_in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#thanks_container {
+  opacity: 0;
+}
+
+button {
+  background-color: #fb7413;
+  text-transform: uppercase;
+  color: white;
+  width: 100%;
+  height: 40px;
+  border-radius: 50px/50px;
+  letter-spacing: 2px;
+  z-index: 5;
+}
+
+button:hover {
+  background-color: white;
+  color: #fb7413;
+  cursor: pointer;
+}
+/*# sourceMappingURL=style.css.map */

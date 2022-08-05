@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+
+$orange: hsl(25, 97%, 53%);
+$white: hsl(0, 0%, 100%);
+$lightGrey: rgb(149, 158, 172);
+$mediumGrey: rgb(124, 135, 152);
+$darkBlue: rgb(37, 45, 55);
+$veryDarkBlue: rgb(18, 20, 23);
+$veryDarkBlue_bg: #060708;
+
+body{
+    font-family: 'Overpass', sans-serif;
+    font-size: 15px;
+    background-color: $veryDarkBlue_bg;
+    color: $mediumGrey;
+}
+
+#content_box{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+
+
+
+#rating_container, #thanks_container{
+    position: absolute;
+    content: '';
+    width: 300px;
+    height: 440px;
+    overflow: hidden;
+    border-radius: 25px;
+    padding: 30px;
+    
+    &::after{
+        position: absolute;
+        content: '';
+        width: 360px;
+        height: 700px;
+        top: -350px;
+        left: 0;
+        background: rgb(37,45,55);
+        background: radial-gradient(circle, rgb(37, 46, 58) 0%, rgb(18, 20, 23) 90%);    
+        background-repeat: no-repeat;
+        z-index: -1;
+        border-radius: 25px;
+    }
+}
+
+#rating_container{
+    z-index: 5;
+}
+
+#thanks_container{
+    z-index: 3;
+}
+
+.borderimg{
+    background-color: rgba($color: #fff, $alpha: .1);
+    width: 15px;
+    padding: 12px;
+    border-radius: 50%;
+}
+
+h1{
+    font-size: 24px;
+    color: $white;
+}
+
+#rating_box{
+    display: flex;
+    width: 100%;
+    height: 90px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.number{
+    width: 45px;
+    height: 45px;
+    background-color: rgba($color: $mediumGrey, $alpha: .2);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+
+    &:hover{
+        background-color: $orange;
+        color: $white;
+        cursor: pointer;
+    }
+
+    &:active {
+        background-color: $lightGrey;
+    }
+}
+
+.n_active{
+    background-color: $lightGrey;
+    color: $white;
+}
+
+.rating_box_fade{
+    animation: fade_box_out .3s ease-in-out forwards;
+}
+
+@keyframes fade_box_out {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.thanks_container_fade{
+    animation: fade_box_in .3s ease-in-out forwards;
+    animation-delay: .3s;
+}
+
+@keyframes fade_box_in{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+
+
+#thanks_container{
+    opacity: 0;
+}
+
+button{
+    background-color: $orange;
+    text-transform: uppercase;
+    color: $white;
+    width: 100%;
+    height: 40px;
+    border-radius: 50px/50px;
+    letter-spacing: 2px;
+    z-index: 5;
+
+    &:hover{
+        background-color: $white;
+        color: $orange;
+        cursor: pointer;
+    }
+}
+
