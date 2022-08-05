@@ -31,16 +31,16 @@ body{
 #rating_container, #thanks_container{
     position: absolute;
     content: '';
-    width: 300px;
-    height: 440px;
+    width: 320px;
+    height: 300px;
     overflow: hidden;
     border-radius: 25px;
-    padding: 30px;
+    padding: 20px;
     
     &::after{
         position: absolute;
         content: '';
-        width: 360px;
+        width: 380px;
         height: 700px;
         top: -350px;
         left: 0;
@@ -70,6 +70,10 @@ body{
 h1{
     font-size: 24px;
     color: $white;
+}
+
+.text_thx_content{
+    text-align: center;
 }
 
 #rating_box{
@@ -112,9 +116,11 @@ h1{
 
 @keyframes fade_box_out {
     0%{
+        
         opacity: 1;
     }
     100%{
+        transform: translate(0px, 100px);
         opacity: 0;
     }
 }
@@ -123,12 +129,14 @@ h1{
     animation: fade_box_in .3s ease-in-out forwards;
     animation-delay: .3s;
 }
-
+ 
 @keyframes fade_box_in{
     0%{
+        transform: translate(0px, 100px);
         opacity: 0;
     }
     100%{
+        transform: translate(0px, 0px);
         opacity: 1;
     }
 }
@@ -137,6 +145,22 @@ h1{
 
 #thanks_container{
     opacity: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+
+    img{
+        height: 100px;
+        width: 160px;
+    }
+}
+
+.raing_info{
+    background-color: rgba($color: $mediumGrey, $alpha: .2);
+    padding: 6px 15px;
+    border-radius: 20px/20px;
+    color: $orange;
 }
 
 button{
