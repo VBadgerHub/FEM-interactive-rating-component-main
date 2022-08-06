@@ -172,6 +172,7 @@ button{
     border-radius: 50px/50px;
     letter-spacing: 2px;
     z-index: 5;
+    border: 0;
 
     &:hover{
         background-color: $white;
